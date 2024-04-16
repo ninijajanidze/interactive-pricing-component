@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 375px;
+    height: 800px;
+    padding: 0 0 88px;
+    background-color: #fff;
+    background-image: url(images/bg-pattern.svg);
+    background-repeat: no-repeat;
+}
+
+.circle {
+    margin: 57px 114px 0;
+}
+
+.header {
+    display: flex;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    z-index: 1;
+    width: 312px;
+    height: 27px;
+    margin: 89px 32px 8px;
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    color: #293356;    
+}
+
+.header p {
+    position: absolute;
+    z-index: 1;
+    width: 170px;
+    height: 46px;
+    margin: 124px 102px 0;
+    font-family: Manrope;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 23px;
+    text-align: center;
+    color: #848ead;    
+}
+
+.wrapper {
+    width: 327px;
+    height: 478px;
+    margin: 32px 24px 0;
+    padding: 34px 0 32px;
+    border-radius: 8px;
+    box-shadow: 0 20px 30px -5px rgba(127, 137, 185, 0.15);
+    background-color: #fff;
+}
+
+.pageviews {
+    width: 126px;
+    height: 16px;
+    margin: 0 100px;
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.71px;
+    text-align: center;
+    color: #848ead;   
+}
+
+.price-input {
+    position: relative;
+    margin: 41px 24px 0;
+}
+
+#price-range {
+    appearance: none;
+    width: 279px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #ECF0FB;
+}
+
+#price-range::-webkit-slider-thumb {
+    position: relative;
+    z-index: 9;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: #10D8C4;
+    border-radius: 50%;
+    box-shadow: 0px 15px 30px rgba(0, 255, 231, 0.6);
+    background-image: url(./images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+#price-range::-webkit-slider-thumb:hover{
+    background: #24AEA1;
+    background-image: url(./images/icon-slider.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    cursor: pointer;
+}
+
+.slide {
+    width: 50%;
+    height: 8px;
+    background-color: rgb(164, 243, 235);
+    border-radius: 5px;
+    position: absolute;
+    margin-top: -11px;
+    left: 0;
+}
+
+.dollar, .price {
+    display: flex;
+    height: 44px;
+    margin: 0 10px 0 0;
+    font-family: Manrope;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    text-align: right;
+    color: #293356;
+    align-items: center;
+}
+
+.price {
+    margin: 40px 0 0 79px;
+}
+
+.month {
+    width: 70px;
+    height: 19px;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: start;
+    color: #848ead;
+}
+
+.discount-comp {
+    display: none;
+}
+
+.billing {
+    width: 272px;
+    height: 22px;
+    margin: 34px 11px 38px 44px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    height: 16px;
+    margin: 0;
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: start;
+    color: #848ead;   
+}
+
+.discount-div {
+    width: 41px;
+    height: 19px;
+    border-radius: 9.5px;
+    background-color: #feede8;
+    text-align: center;
+    margin-left: 6px;
+}
+
+.discount {
+    width: 26px;
+    height: 14px;
+    font-family: Manrope;
+    font-size: 10px;
+    font-weight: 800;
+    text-align: center;
+    color: #ff8d68;
+}
+
+#switch{
+    position: relative;
+    margin: 0 12px;
+    width: 43px;
+    height: 22px;
+}
+
+.slide2{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #CFD8EF;
+    transition: .3s;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#switch input{
+    display: none;
+}
+
+.slide2:before{
+    position: absolute;
+    content: "";
+    height: 14.5px;
+    width: 14.5px;
+    left: 4px;
+    top: 4px;
+    background-color: #ffffff;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slide2{
+    background-color: #7AEADF;
+}
+
+input:checked + .slide2:before{
+    transform: translateX(21px);
+}
+
+.line {
+    width: 327px;
+    height: 1px;
+    margin: 38px 0 24px;
+    background-color: #ecf0fb;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.websites, .ownership, .reports {
+    display: flex;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+h4 {
+    height: 16px;
+    margin: 2px 0 0 16.1px;
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: #848ead;    
+}
+
+button {
+    width: 170px;
+    height: 41px;
+    margin: 12px 80px 0 77px;
+    border-radius: 20.5px;
+    background-color: #293356; 
+    border: none;   
+    font-family: Manrope;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+    color: #becdff;
+}
+
+@media  screen and (min-width:1440px) {
+    .container {
+        width: 1440px;
+        padding: 0 0 137px;
+        background-color: #f9faff;
+    }
+    
+    .circle {
+        margin: 67px 647px 0;
+    }
+    
+    .header {
+        display: flex;
+        position: relative;
+    }
+    
+    h1 {
+        position: absolute;
+        z-index: 1;
+        width: 393px;
+        height: 38px;
+        margin: 104px 523px 0;
+        font-size: 28px;
+        text-align: center;
+        color: #293356;  
+    }
+    
+    .header p {
+        position: absolute;
+        z-index: 1;
+        width: 367px;
+        height: 20px;
+        margin: 144px 536px 0;
+        font-size: 15px;
+    }  
+
+    .wrapper {
+        width: 540px;
+        height: 397px;
+        margin: 54px 450px 0;
+        padding: 58px 44px 33px 48px;
+    }
+
+    .pageviews {
+        width: 144px;
+        height: 19px;
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: 1.71px;
+        text-align: start;
+        color: #848ead; 
+    }
+
+    .price-box {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    .dollar, .price {
+        display: flex;
+        height: 44px;
+        margin: 0;
+        font-size: 40px;
+        letter-spacing: -1px;
+        text-align: right;
+        align-items: center;
+    }
+
+    .price {
+        margin: -33px 0 0 103px;
+    }
+    
+    .month {
+        width: 61px;
+        height: 22px;
+        font-size: 16px;
+        margin-left: 8px;
+    }
+    
+    .discount-mob {
+        display: none;
+    }
+
+    .discount-comp {
+        display: block;
+    }
+    
+    #price-range {
+        appearance: none;
+        width: 446px;
+        height: 8px;
+    }
+
+    .price-input {
+        position: relative;
+        margin: 41px 0 0;
+    }
+
+    .billing {
+        width: 321px;
+        height: 22px;
+        margin: 57px 17px 40px 106px;
+    }
+    
+    .checkbox {
+        width: 85px; 
+    }
+    
+    .discount-div {
+        display: none;
+    }
+
+    .discount-div-comp {
+        display: block;
+        width: 80px;
+        height: 19px;
+        padding: 4px 7px 3px 6px;
+        border-radius: 9.5px;
+        background-color: #feede8;
+    }
+
+    
+    .discount {
+        width: 67px;
+        text-align: center;
+        font-size: 9.3px;
+    }
+    
+    #switch input{
+        display: none;
+    }
+    
+    .line {
+        width: 540px;
+        margin: 0 0 32px -48px;
+    }
+    
+    .footer {
+        display: flex;
+        flex-direction: unset;
+        align-items: center;
+    }
+    
+    h4 {
+        text-align: start;  
+    }
+    
+    button {
+        margin: 0 0 14px 130px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        color: #fff;
+    }
+
+}
